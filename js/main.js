@@ -1,4 +1,5 @@
 //Simulador de Notas x3 asignatura
+//Variables e ingreso de datos
 console.log("Simulador de promedio.");
 console.log("La escala de notas va de 1 a 10.")
 console.log("Aprobación: Nota 6 hacia arriba")
@@ -15,7 +16,7 @@ let n3 = parseInt(prompt("Ingresa tercera nota."));
 while(n3<=0 || n3>10) {
     n1 = parseInt(prompt("Ingresa Nota entre 1 a 10."));
 }
-let calculaPromedio;
+let calcularPromedio;
 let promedio;
 let aprobar
 let estado;
