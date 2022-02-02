@@ -10,19 +10,26 @@ while(n1<=0 || n1>10) {
 }
 let n2 = parseInt(prompt("Ingresa segunda nota."));
 while(n2<=0 || n2>10) {
-    n1 = parseInt(prompt("Ingresa Nota entre 1 a 10."));
+    n2 = parseInt(prompt("Ingresa Nota entre 1 a 10."));
 }
 let n3 = parseInt(prompt("Ingresa tercera nota."));
 while(n3<=0 || n3>10) {
-    n1 = parseInt(prompt("Ingresa Nota entre 1 a 10."));
+    n3 = parseInt(prompt("Ingresa Nota entre 1 a 10."));
 }
-let calcularPromedio;
+//let calcularPromedio;
 let promedio;
 let aprobar
 let estado;
+const notas = [n1,n2,n3];
+let suma;
 //Función promedio
-calcularPromedio = (n1,n2,n3) =>{
-    return Math.round((n1+n2+n3)/3);
+calcularPromedio = () =>{
+    for (let i = 0; i < notas.length; i++) {
+        suma = parseInt(suma + notas[i]);
+        console.log(notas[i]);
+    }
+    promedio = parseInt(suma/3);
+    return promedio;
 }
 //Función aprobar
 aprobar = (promedio) =>{
@@ -35,5 +42,9 @@ aprobar = (promedio) =>{
 }
 //Resultados.
 console.log("Bienvenido "+nombre);
-console.log("Tu promedio es "+calcularPromedio(n1,n2,n3));
-console.log("Estado: "+aprobar(calcularPromedio(n1,n2,n3)));
+console.log("Tu promedio es "+calcularPromedio());
+console.log("Estado: "+aprobar(calcularPromedio()));
+console.log(promedio);
+console.log(suma);
+console.log(typeof promedio);
+console.log(typeof suma);
